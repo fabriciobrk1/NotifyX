@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34723.18
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotifyX", "NotifyX\NotifyX.csproj", "{ADC708AC-0923-4452-9394-C7B78A5F25BA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ADC708AC-0923-4452-9394-C7B78A5F25BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADC708AC-0923-4452-9394-C7B78A5F25BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADC708AC-0923-4452-9394-C7B78A5F25BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADC708AC-0923-4452-9394-C7B78A5F25BA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BA587AE7-C960-43F7-916D-53467640FB1C}
+	EndGlobalSection
+EndGlobal
