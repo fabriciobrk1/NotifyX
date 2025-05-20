@@ -20,3 +20,23 @@ NotifyX é um sistema de gestão de usuários e envio de notificações via e-ma
    ```bash
    git clone https://github.com/seuusuario/NotifyX.git
    cd NotifyX
+
+## 📦 Configuração do Banco de Dados  
+Antes de rodar o projeto, configure o **banco de dados** no arquivo `appsettings.json`:  
+
+```json
+"ConnectionStrings": {
+    "DefaultConnection": "server=SEU_SERVIDOR;database=NotifyXDB;user=SEU_USUARIO;password=SUA_SENHA"
+}
+✅ Substitua os valores conforme seu banco de dados. ✅ Após configurar, execute as migrations para preparar a estrutura do banco:
+dotnet ef database update
+
+## 📧 Configuração do Envio de E-mail
+Para enviar e-mails, edite diretamente no código (EmailsController.cs):
+
+var smtpClient = new SmtpClient("smtp.gmail.com")
+{
+    Port = 587,
+    Credentials = new NetworkCredential("SEU_EMAIL@gmail.com", "SENHA_DE_APLICATIVO"),
+    EnableSsl = true,
+};
