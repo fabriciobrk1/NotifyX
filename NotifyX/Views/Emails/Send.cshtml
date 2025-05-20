@@ -1,0 +1,23 @@
+﻿@model List<NotifyX.Models.Usuario>
+
+<h2>Enviar E-mail</h2>
+
+<form method="post" asp-controller="Emails" asp-action="SendEmail">
+    <div class="form-group">
+        <label>Selecionar Destinatários:</label>
+        @foreach (var cliente in Model)
+        {
+            <div>
+                <input type="checkbox" name="clientesSelecionados" value="@cliente.Email" />
+                @cliente.Nome (@cliente.Email)
+            </div>
+        }
+    </div>
+
+    <div class="form-group">
+        <label>Mensagem:</label>
+        <textarea name="mensagem" class="form-control"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Enviar</button>
+</form>
