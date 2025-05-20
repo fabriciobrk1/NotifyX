@@ -18,7 +18,7 @@ NotifyX é um sistema de gestão de usuários e envio de notificações via e-ma
 ## 📦 Instalação
 1️⃣ Clone o repositório:
    ```bash
-   git clone https://github.com/seuusuario/NotifyX.git
+   git clone https://github.com/fabriciobrk1/NotifyX.git
    cd NotifyX
 
 ## 📦 Configuração do Banco de Dados  
