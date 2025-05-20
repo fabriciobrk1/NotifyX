@@ -23,6 +23,25 @@ namespace NotifyX.Controllers
         [HttpPost]
         public IActionResult SendEmail(List<string> clientesSelecionados, string mensagem)
         {
+
+           
+            if (clientesSelecionados == null || !clientesSelecionados.Any())
+            {
+                ModelState.AddModelError("clientesSelecionados", "Selecione pelo menos um destinatário.");
+            }
+
+            
+            if (string.IsNullOrWhiteSpace(mensagem))
+            {
+                ModelState.AddModelError("mensagem", "A mensagem não pode estar vazia.");
+            }
+
+            
+            if (!ModelState.IsValid)
+            {
+                return View("Send", _context.Usuarios.ToList());
+            }
+
             var smtpClient = new SmtpClient("smtp.gmail.com")
             {
                 Port = 587,
@@ -43,6 +62,9 @@ namespace NotifyX.Controllers
 
                 smtpClient.Send(mailMessage);
             }
+
+            TempData["MensagemSucesso"] = "E-mail enviado com sucesso!";
+            
 
             return RedirectToAction("Send");
         }

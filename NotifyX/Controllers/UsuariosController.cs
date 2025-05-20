@@ -13,16 +13,19 @@ namespace NotifyX.Controllers
     public class UsuariosController : Controller
     {
         private readonly AppDbContext _context;
+        private readonly ILogger<UsuariosController> _logger;
 
-        public UsuariosController(AppDbContext context)
+        public UsuariosController(AppDbContext context, ILogger<UsuariosController> logger)
         {
             _context = context;
+            _logger = logger;
         }
 
         // GET: Usuarios
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Usuarios.ToListAsync());
+            var usuarios = _context.Usuarios.ToList();
+            return View(usuarios);
         }
 
         // GET: Usuarios/Details/5
@@ -58,9 +61,17 @@ namespace NotifyX.Controllers
         {
             if (ModelState.IsValid)
             {
-                _context.Add(usuario);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                try
+                {
+                    _context.Add(usuario);
+                    await _context.SaveChangesAsync();
+                    return RedirectToAction(nameof(Index));
+                }
+                catch (Exception ex) 
+                {
+                    ModelState.AddModelError("", "Ocorreu um erro ao salvar o usuário.");
+                    Console.WriteLine($"Erro ao criar usuário: {ex.Message}");
+                }
             }
             return View(usuario);
         }

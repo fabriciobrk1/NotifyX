@@ -30,6 +30,9 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
 
+app.UseExceptionHandler("/Home/Error");
+app.UseStatusCodePagesWithRedirects("/Home/Error?code={0}");
+
 app.UseAuthentication();
 app.UseAuthorization();
 

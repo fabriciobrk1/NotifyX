@@ -14,10 +14,18 @@
         }
     </div>
 
+    
     <div class="form-group">
         <label>Mensagem:</label>
-        <textarea name="mensagem" class="form-control"></textarea>
+        <textarea name="mensagem" class="form-control" required></textarea>
     </div>
 
     <button type="submit" class="btn btn-primary">Enviar</button>
+
+    @if (TempData["MensagemSucesso"] != null)
+    {
+        <div class="alert alert-success">
+            @TempData["MensagemSucesso"]
+        </div>
+    }
 </form>
