@@ -45,7 +45,7 @@ namespace NotifyX.Controllers
             var smtpClient = new SmtpClient("smtp.gmail.com")
             {
                 Port = 587,
-                Credentials = new NetworkCredential("fabricio.batista.r@gmail.com", "yyxo mtop papu obzx\r\n"),
+                Credentials = new NetworkCredential("fabricio.batista.r@gmail.com", "senha aqui"),
                 EnableSsl = true,
             };
 
