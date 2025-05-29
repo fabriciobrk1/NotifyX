@@ -1,18 +1,22 @@
-﻿@model NotifyX.Models.LoginViewModel
+﻿@using NotifyX.Models
+@model LoginViewModel
+<link rel="stylesheet" href="/css/Login.css"/>
 
-<h2>Login</h2>
+<div class="login-container">
+    <h2>Login</h2>
 
-<form method="post" asp-controller="Account" asp-action="Login">
-    <div class="form-group">
-        <label asp-for="Email"></label>
-        <input asp-for="Email" class="form-control" />
-    </div>
-    <div class="form-group">
-        <label asp-for="Password"></label>
-        <input asp-for="Password" class="form-control" type="password" />
-    </div>
-    <div class="form-group">
-        <input asp-for="RememberMe" type="checkbox" /> Lembrar-me
-    </div>
-    <button type="submit" class="btn btn-primary">Entrar</button>
-</form>
+    <form method="post" asp-controller="Account" asp-action="Login">
+        <div class="form-group">
+            <label asp-for="Email"></label>
+            <input asp-for="Email" class="form-control rounded-input" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Password"></label>
+            <input asp-for="Password" class="form-control rounded-input" type="password" />
+        </div>
+        <div class="form-group remember-me">
+            <input asp-for="RememberMe" type="checkbox" /> Lembrar-me
+        </div>
+        <button type="submit" class="btn btn-primary rounded-button">Entrar</button>
+    </form>
+</div>

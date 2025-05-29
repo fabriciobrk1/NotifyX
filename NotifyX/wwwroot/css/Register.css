@@ -1,0 +1,30 @@
+﻿.register-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.rounded-input {
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+}
+
+.rounded-button {
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.form-group {
+    margin-bottom: 15px; 
+}
+
+.rounded-button {
+    margin-top: 10px; 
+}

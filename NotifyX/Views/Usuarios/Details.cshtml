@@ -4,33 +4,27 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Detalhes</h1>
+<link rel="stylesheet" href="~/css/client_theme.css" />
 
-<div>
-    <h4>Usuario</h4>
+<div class="container">
+    <h1>Detalhes do Usuário</h1>
     <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Nome)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Nome)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Email)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Email)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Telefone)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Telefone)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Editar</a> |
-    <a asp-action="Index">Voltar para a lista</a>
+
+    <div class="details-container">
+        <dl class="details-list">
+            <dt>Nome:</dt>
+            <dd>@Html.DisplayFor(model => model.Nome)</dd>
+
+            <dt>Email:</dt>
+            <dd>@Html.DisplayFor(model => model.Email)</dd>
+
+            <dt>Telefone:</dt>
+            <dd>@Html.DisplayFor(model => model.Telefone)</dd>
+        </dl>
+
+        <div class="details-actions">
+            <a asp-action="Edit" asp-route-id="@Model?.Id" class="action-button">Editar</a>
+            <a asp-action="Index" class="action-button action-secondary">Voltar à Lista</a>
+        </div>
+    </div>
 </div>
