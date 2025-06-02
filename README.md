@@ -1,7 +1,7 @@
 # NotifyX 📩
 
 ## 📖 Sobre o Projeto
-NotifyX é um sistema de gestão de usuários e envio de notificações via e-mail, desenvolvido em ASP.NET Core com Entity Framework e autenticação via Identity.
+NotifyX é um sistema de gestão de usuários e envio de notificações via e-mail, desenvolvido em ASP.NET MVC com Entity Framework e autenticação via Identity.
 
 ## 🚀 Funcionalidades
 ✅ Autenticação de usuários (Login, Registro, Logout)  
